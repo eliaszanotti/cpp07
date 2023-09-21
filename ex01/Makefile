@@ -6,7 +6,7 @@
 #    By: elias <elias@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/16 17:08:00 by elias             #+#    #+#              #
-#    Updated: 2023/09/21 14:47:53 by elias            ###   ########.fr        #
+#    Updated: 2023/09/21 16:30:27 by elias            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ S_TMP		= ${addprefix ${D_SRC}, ${S_SRC}}
 O_SRC		= $(patsubst %.cpp, ${D_OBJS}%.o, $(S_TMP))
 
 # VARIABLES
-NAME		= template
+NAME		= iter
 CC			= c++ -std=c++98
 
 # FLAGS
