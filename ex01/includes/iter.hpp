@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elias <elias@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/21 14:46:48 by elias             #+#    #+#             */
-/*   Updated: 2023/09/21 16:15:37 by elias            ###   ########.fr       */
+/*   Created: 2023/09/21 15:08:35 by elias             #+#    #+#             */
+/*   Updated: 2023/09/21 16:14:44by elias            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,29 +16,16 @@
 # include <iostream>
 
 template<typename T>
-void    swap(T &valueA, T &valueB)
+void	iter(T *array, int len, void (*f)(T const &))
 {
-    T   tmp;
-
-    tmp = valueA;
-    valueA = valueB;
-    valueB = tmp;
+	for(int i = 0; i < len; i++)
+		f(array[i]);
 }
 
 template<typename T>
-const   T &max(T &valueA, T &valueB)
+void	print(T const &element)
 {
-    if (valueA > valueB)
-        return (valueA);
-    return (valueB);
-}
-
-template<typename T>
-const   T &min(T &valueA, T &valueB)
-{
-    if (valueA < valueB)
-        return (valueA);
-    return (valueB);
+	std::cout << "element: " << element << std::endl;
 }
 
 #endif
