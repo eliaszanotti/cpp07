@@ -6,7 +6,7 @@
 /*   By: elias <elias@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 13:34:13 by elias             #+#    #+#             */
-/*   Updated: 2023/09/21 16:53:32 by elias            ###   ########.fr       */
+/*   Updated: 2023/09/22 12:58:44 by elias            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,12 @@
 
 # include <iostream>
 
+template<typename T>
 class Array
 {
 	private:
-		size_t	size;
+		size_t	_size;
 		T		*_array;
-		// Print
-		void	print(std::string const &str, int color) const;
 
 	public:
 		// Constructors

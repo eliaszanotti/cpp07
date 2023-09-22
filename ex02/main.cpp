@@ -6,15 +6,15 @@
 /*   By: elias <elias@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 16:18:16 by elias             #+#    #+#             */
-/*   Updated: 2023/09/21 16:55:15 by elias            ###   ########.fr       */
+/*   Updated: 2023/09/22 12:56:14 by elias            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <time.h>
-
 #include <string>
 #include "Array.hpp"
+#include "Array.tpp"
 
 template <typename T>
 void printArray(Array<T> &a)
@@ -32,13 +32,13 @@ void printArray(Array<T> &a)
 int main(void)
 {
 	{
-		std::cout << BLUE << "\n------- EMPTY ARRAY -------\n" << WHITE << std::endl;
+		std::cout << "\n------- EMPTY ARRAY -------\n" << std::endl;
 		Array<int> empty;
 		std::cout << "Empty: ";
 		printArray(empty);
 	}
 	{
-		std::cout << BLUE << "\n------- INT ARRAY -------\n" << WHITE << std::endl;
+		std::cout << "\n------- INT ARRAY -------\n" << std::endl;
 		Array<int> a(10);
 		for (int i(0); i < 10; i++)
 			a[i] = i;
@@ -46,7 +46,7 @@ int main(void)
 		printArray(a);
 	}
 	{
-		std::cout << BLUE << "\n------- STRING ARRAY -------\n" << WHITE << std::endl;
+		std::cout << "\n------- STRING ARRAY -------\n" << std::endl;
 		Array<std::string> a(10);
 		for (int i(0); i < 10; i++)
 			a[i] = "gtr";
@@ -54,7 +54,7 @@ int main(void)
 		printArray(a);
 	}
 	{
-		std::cout << BLUE << "\n------- COPY & ASSIGNEMENT ARRAY -------\n" << WHITE << std::endl;
+		std::cout << "\n------- COPY & ASSIGNEMENT ARRAY -------\n" << std::endl;
 		Array<std::string> a(10);
 		for (int i(0); i < 10; i++)
 			a[i] = "gtr";
@@ -70,7 +70,7 @@ int main(void)
 		printArray(c);
 	}
 	{
-		std::cout << BLUE << "\n------- CATCH EXCEPTION -------\n" << WHITE << std::endl;
+		std::cout << "\n------- CATCH EXCEPTION -------\n" << std::endl;
 		try
 		{
 			Array<std::string> a(10);
